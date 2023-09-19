@@ -14,6 +14,7 @@ function App() {
   // from the API we will get the value of the currency and converted rate
   const currencyInfo = useCurrencyInfo(from);
   // It allows to select the values from the Options in the "from" and "to" value, which only select the keys which is available in the API
+
   const options = Object.keys(currencyInfo);
 
   // swap button functionality, which allow user to change the currency option "from" to "to" and "to" to "from"
@@ -49,7 +50,7 @@ function App() {
                 label="From"
                 amount={amount}
                 currencyOption={options}
-                onCurrencyChange={(currency) => setAmount(currency)}
+                onCurrencyChange={(currency) => setFrom(currency)}
                 onAmountChange={(amount) => setAmount(amount)}
                 selectCurrency={from}
               />
